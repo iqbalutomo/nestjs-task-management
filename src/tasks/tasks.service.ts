@@ -28,4 +28,9 @@ export class TasksService {
     this.tasks.push(task);
     return task;
   }
+
+  deleteTask(id: string): Task[] {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+    return;
+  }
 }
